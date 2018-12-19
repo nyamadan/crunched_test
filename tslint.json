@@ -1,0 +1,15 @@
+{
+    "defaultSeverity": "warning",
+    "jsRules": {},
+    "extends": [
+        "tslint:recommended",
+        "tslint-react"
+    ],
+    "rules": {
+        "jsx-wrap-multiline": false,
+        "no-empty-interface": false,
+        "no-bitwise": false,
+        "no-console":false
+    },
+    "rulesDirectory": []
+}

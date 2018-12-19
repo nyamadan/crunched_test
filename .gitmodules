@@ -1,0 +1,4 @@
+[submodule "crunch"]
+	path = crunch
+	url = https://github.com/Unity-Technologies/crunch.git
+	ignore = untracked
