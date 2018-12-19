@@ -38,7 +38,7 @@ interface IState {
 
 export interface IImageCanvasSrc {
   path: string;
-  type: "img" | "dxt5" | "etc2";
+  type: "img" | "dxt1" | "dxt5" | "etc2";
 }
 
 export class ImageCanvas extends React.Component<IProps, IState> {
@@ -123,6 +123,14 @@ export class ImageCanvas extends React.Component<IProps, IState> {
     let format: number = 0;
 
     switch (src.type) {
+      case "dxt1":
+        if (!s3tc) {
+          throw new Error("Unsupported format: COMPRESSED_RGBA_S3TC_DXT1_EXT");
+        }
+
+        format = s3tc.COMPRESSED_RGBA_S3TC_DXT1_EXT;
+
+        break;
       case "dxt5":
         if (!s3tc) {
           throw new Error("Unsupported format: COMPRESSED_RGBA_S3TC_DXT5_EXT");

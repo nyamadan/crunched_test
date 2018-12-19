@@ -12,12 +12,14 @@ async function main() {
 
   ReactDOM.render(
     <React.Fragment>
+      <h2>JPG</h2>
+      <ImageCanvas src={{path: "./assets/jinja.jpg", type: "img"}} />
+      <h2>DXT1</h2>
+      <ImageCanvas src={{path: "./assets/jinja.dxt1.crn", type: "dxt1"}} />
       <h2>DXT5</h2>
       <ImageCanvas src={{path: "./assets/jinja.dxt5.crn", type: "dxt5"}} />
       <h2>ETC2</h2>
       <ImageCanvas src={{path: "./assets/jinja.etc2.crn", type: "etc2"}} />
-      <h2>JPG</h2>
-      <ImageCanvas src={{path: "./assets/jinja.jpg", type: "img"}} />
     </React.Fragment>,
     container);
 }
